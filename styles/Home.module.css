@@ -114,3 +114,20 @@
     flex-direction: column;
   }
 }
+
+/* Header Start  */
+
+.navbar {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000012;
+opacity: 1;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #6B9864 !important;
+}
+
+.heading1 {
+  font-size: 40px;
+  color: #6B9864;
+}

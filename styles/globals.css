@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.flowerImage {
+  /* background-image: url('../public/flowerImg.jpeg'); */
+  /* width: 100%; */
+  height: auto;
+  transform: translate(586.44px, 487.814px) matrix(1,0,0,1,-254.0518,-216.2204) rotate(36deg);
+  transform-origin: center;
+}
