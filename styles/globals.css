@@ -15,10 +15,48 @@ a {
   box-sizing: border-box;
 }
 
+/* Login Page Start  */
+
 .flowerImage {
   /* background-image: url('../public/flowerImg.jpeg'); */
   /* width: 100%; */
   height: auto;
-  transform: translate(586.44px, 487.814px) matrix(1,0,0,1,-254.0518,-216.2204) rotate(36deg);
+  transform: translate(586.44px, 487.814px)
+    matrix(1, 0, 0, 1, -254.0518, -216.2204) rotate(36deg);
   transform-origin: center;
+}
+
+.navbar {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000012;
+  opacity: 1;
+}
+
+.nav-link {
+  color: #6b9864 !important;
+}
+
+.btn {
+  border-radius: 14px !important;
+}
+
+.heading1 {
+  color: #226131;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#form3Example3 {
+  background: #ffffff 0% 0% no-repeat paddingBox !important;
+  box-shadow: 0px 0px 8px #6b986443 !important;
+  border-radius: 14px !important;
+  height: 61px !important;
+}
+
+.loginBtn {
+  background-color: #6B9864 !important;
+  border-radius: 14px;
+  height: 83px; 
+  font-size: 30px !important;
+  color: #ffffff !important;
 }
