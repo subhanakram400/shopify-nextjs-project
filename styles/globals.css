@@ -64,6 +64,14 @@ a {
   font-size: 29px !important;
   width: 570px;
 }
+
+.font75 {
+  font-size: 75px;
+}
+
+.font36 {
+  font-size: 36px;
+}
 /* .icon {
   padding-left: 32px !important;
   background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
@@ -134,7 +142,7 @@ border-radius: 11px !important;
 }
 
 .centered {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

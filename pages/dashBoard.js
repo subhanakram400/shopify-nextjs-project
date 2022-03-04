@@ -1,8 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import TextField from '@material-ui/core/TextField';
 import { ButtonGroup, ThemeProvider } from '@material-ui/core';
-import textFieldTheme from '../styles/textFieldTheme.js'
+import searchField from '../styles/textFieldTheme.js'
 import SearchIcon from '@material-ui/icons/Search';
 import Button from "@material-ui/core/Button"
 
@@ -52,7 +51,7 @@ const dashBoard = () => {
             <div className='bg w-100 h-100'>
                 <div className="row m-0 p-3">
                     <div className="col-12 d-flex justify-content-between">
-                        <ThemeProvider theme={textFieldTheme}>
+                        <ThemeProvider theme={searchField}>
                             <TextField className='w-50' placeholder='Artikel durchsuchen' variant="outlined"
                                 InputProps={{
                                     startAdornment: (
@@ -88,7 +87,7 @@ const dashBoard = () => {
                             <img className='' src='cardImg.jpeg' width={346} height={192} style={{ borderRadius: '16px' }}>
                             </img>
                             <div className='centered w-100 mb-0'>
-                            <p className=''>Monatsspecial: Zucchini</p>
+                            <p className='m-0'>Monatsspecial: Zucchini</p>
                             <p className='font12'>Bei unseren Landwirten startet die Ernte</p>
                             </div>
                         </div>

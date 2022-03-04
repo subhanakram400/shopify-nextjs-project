@@ -1,10 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import DraftsIcon from '@material-ui/icons/Drafts';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import '../styles/login.module.css'
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-
+import { ThemeProvider } from '@material-ui/core';
+import textFieldTheme from '../styles/textFieldTheme';
+import { TextField } from '@material-ui/core';
+import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 const Login = () => {
     return (
         <div>
@@ -13,7 +13,7 @@ const Login = () => {
                     <a class="navbar-brand" href="#">
                         <img src='ecovita.png' />
                     </a>
-                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button style={{background: 'black'}} class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -41,20 +41,43 @@ const Login = () => {
                 </div>
             </nav>
             <div className=''>
-                <div className='row m-0'>
-                    <div className='col-lg-6 align-self-center text-center'>
-                        <img className="mx-auto" src='MonogramWei.png' width={'50%'} height="50%" />
-                        <h1 className='mx-auto'>Hier beginnt der <br /> Handel von morgen…</h1>
-                        <p className='mx-auto'>100 % digital, modern und zukunftsorientiert</p>
+                <div className='row m-0 mt-5'>
+                    <div className='col-lg-6 align-self-center d-flex flex-column justify-content-center'>
+                        <img className="mx-auto" src='MonogramWei.png' width={267} height={267} />
+                        <h1 className='mx-auto font75'>Hier beginnt der <br /> Handel von morgen…</h1>
+                        <p className='mx-auto font36'>100 % digital, modern und zukunftsorientiert</p>
                     </div>
-                    <div className={`col-lg-6 text-center align-self-end`}>
+                    <div className={`col-lg-6 align-self-center d-flex flex-column justify-content-center`} style={{marginTop: '5%'}}>
                         <img src='LogoFarbe.png' width={'251px'} height={'84px'} className="mx-auto" />
                         <h1 className='mx-auto heading1'>Hier gehts zum Onlineshop</h1>
                         <h4 className='my-3 mx-auto texts'>Loggen Sie sich ein um mit Ihrer Bestellung fortzufahren</h4>
-                        <input type="email" id="form3Example3" class="icon form-control form-control-md my-4 mx-auto my-3 w-75"
-                            placeholder=" E-Mail" />
-                        <input type="email" id="form3Example3" class="form-control form-control-md my-4 mx-auto w-75"
-                            placeholder=" Password" />
+                        <ThemeProvider theme={textFieldTheme}>
+                            <TextField className='w-75 mx-auto' placeholder='E-Mail' variant="outlined"
+                            // inputProps={{
+                            //     style:{
+                            //         color: '#70995F !important',
+                            //         opacity: '100% !important',
+                            //         fontWeight: 'bold'
+                            //     }
+                            // }}
+                                InputProps={{
+                                    startAdornment: (
+                                        <MailOutlineOutlinedIcon fontSize='' className='mx-2' style={{ color: '#575757' }} />
+                                    )
+                                }}
+                            />
+                        </ThemeProvider>
+                        <ThemeProvider theme={textFieldTheme}>
+                            <TextField className='w-75 my-4 mx-auto' placeholder='Passwort' variant="outlined"
+                                InputProps={{
+                                    startAdornment: (
+                                        <svg className='mx-2' xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="#575757" class="bi bi-lock" viewBox="0 0 16 16">
+                                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                    )
+                                }}
+                            />
+                        </ThemeProvider>
                         <p className='mx-auto' style={{ color: '#6B9864', fontSize: '20px' }}>Passwort vergessen</p>
                         <button className='btn mx-auto w-75 my-2 loginBtn'>Login</button>
                     </div>
