@@ -2,7 +2,7 @@ import DraftsIcon from '@material-ui/icons/Drafts';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import '../styles/login.module.css'
 import { ThemeProvider } from '@material-ui/core';
-import textFieldTheme from '../styles/textFieldTheme';
+import {textFieldTheme} from '../styles/textFieldTheme';
 import { TextField } from '@material-ui/core';
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 const Login = () => {
@@ -39,16 +39,18 @@ const Login = () => {
                 </div>
             </nav>
             <div className=''>
-                <div className='row m-0 mt-5'>
-                    <div className='col-lg-6 align-self-center d-flex flex-column justify-content-center'>
-                        <img className="mx-auto" src='MonogramWei.png' width={267} height={267} />
-                        <h1 className='mx-auto font75'>Hier beginnt der <br /> Handel von morgen…</h1>
-                        <p className='mx-auto font36'>100 % digital, modern und zukunftsorientiert</p>
+                <div className='row m-0'>
+                    <div className='col-lg-6 p-0' style={{height: 'auto'}}>
+                        <div className='backgrounImg'>
+                        <img className="mx-auto d-flex justify-content-center" src='MonogramWei.png' width={200} height={200} />
+                        <h1 className='mx-auto d-flex font75 justify-content-center'>Hier beginnt der <br /> Handel von morgen…</h1>
+                        <p className='mx-auto font36 d-flex justify-content-center'>100 % digital, modern und zukunftsorientiert</p>
+                        </div>
                     </div>
-                    <div className={`col-lg-6 align-self-center d-flex flex-column justify-content-center`} style={{marginTop: '5%'}}>
+                    <div className={`col-lg-6 align-self-center d-flex flex-column justify-content-center`}>
                         <img src='LogoFarbe.png' width={'251px'} height={'84px'} className="mx-auto" />
-                        <h1 className='mx-auto heading1'>Hier gehts zum Onlineshop</h1>
-                        <h4 className='my-3 mx-auto texts'>Loggen Sie sich ein um mit Ihrer Bestellung fortzufahren</h4>
+                        <h1 className='mx-auto heading1 text-center' style={{maxWidth: ''}}>Hier gehts zum Onlineshop</h1>
+                        <h4 className='my-3 mx-auto texts' style={{maxWidth: '75%'}}>Loggen Sie sich ein um mit Ihrer Bestellung fortzufahren</h4>
                         <ThemeProvider theme={textFieldTheme}>
                             <TextField className='w-75 mx-auto' placeholder='E-Mail' variant="outlined"
                             // inputProps={{

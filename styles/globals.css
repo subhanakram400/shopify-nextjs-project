@@ -17,13 +17,11 @@ a {
 
 /* Login Page Start  */
 
-.flowerImage {
-  /* background-image: url('../public/flowerImg.jpeg'); */
-  /* width: 100%; */
-  height: auto;
-  transform: translate(586.44px, 487.814px)
-    matrix(1, 0, 0, 1, -254.0518, -216.2204) rotate(36deg);
-  transform-origin: center;
+.backgrounImg {
+  background-image: url('../public/fullImg.png');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .navbar {
@@ -56,7 +54,7 @@ a {
 .loginBtn {
   background-color: #6B9864 !important;
   border-radius: 14px;
-  height: 83px; 
+  /* height: 83px;  */
   font-size: 30px !important;
   color: #ffffff !important;
 }
@@ -66,11 +64,17 @@ a {
 }
 
 .font75 {
-  font-size: 75px;
+  /* font-size: 75px; */
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .font36 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #ffffff;
 }
 /* .icon {
   padding-left: 32px !important;
