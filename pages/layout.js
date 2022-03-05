@@ -5,11 +5,44 @@ import styles from "../styles/layout.module.css";
 import DraftsIcon from '@material-ui/icons/Drafts';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import { MenuOpen } from '@material-ui/icons';
+import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core/styles";
+  
+  const useStyles = makeStyles(theme => ({
+    button: {
+      display: "block",
+      marginTop: theme.spacing(2)
+    },
+    formControl: {
+      margin: theme.spacing(5),
+      minWidth: 120,
+      backgroundColor: "transparent"
+    },
+    select: {
+      textAlign: "center",
+      textDecoration: "none"
+    }
+  }));
 
-export default function Layout({ children }) {
+export default function Layout() {
 
     const [isOpen, setIsOpen] = useState(false);
     const openMenu = () => setIsOpen(!isOpen);
+
+    const countries = [
+        {
+          label: "Germany",
+          src: 'germany.png',
+          link: " ",
+          value: "FR"
+        },
+        {
+          label: "Italy",
+          src: 'italy.png',
+          link: " ",
+          value: "DE"
+        },
+      ];
     return <>
         <header className={styles.header}>
             <nav className={styles.navbar}>
@@ -28,18 +61,17 @@ export default function Layout({ children }) {
                             <a className="nav-link" href="#"><PhoneIphoneIcon className='mx-1' />+43 664 4585535</a>
                         </Link>
                     </li>
-                    <li className={styles.navitem}>
+                    {/* <li className={styles.navitem}>
                         <Link href='/layout#'>
                             <select class="form-select form-select-lg" aria-label="">
-                                <option selected>
-                                    Open this select menu
-                                </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            {countries.map((option, key) => (
+                                            <option value={option.src} key={key}>
+                                                <img src={option.src}/>
+                                            </option>
+                                        ))}
                             </select>
                         </Link>
-                    </li>
+                    </li> */}
                     <li className={styles.navitem}>
                         <Link href='/layout#'>
                             <button className='btn btn-success mx-2 d-flex'>
@@ -55,7 +87,7 @@ export default function Layout({ children }) {
                 >
                     <span className={'d-flex'}>
                         {
-                            isOpen ?  (
+                            isOpen ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-octagon" viewBox="0 0 16 16">
                                     <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z" />
                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
